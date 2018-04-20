@@ -151,6 +151,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setOnMyLocationClickListener(this);
 
         }
+        //where to place these 3 lines??
         subscribe = findViewById(R.id.subscribe);
         subscribeTopic = (EditText) findViewById(R.id.subscribeTopic);
         String topic = subscribeTopic.getText().toString().trim();
@@ -164,7 +165,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         //double d1=Double.parseDouble(l1);
         //double d2=Double.parseDouble(l2);
-        LatLng sydney = new LatLng(Double.valueOf(l1),Double.valueOf(l2));
+        LatLng sydney = new LatLng(Double.valueOf(l1),Double.valueOf(l2));//error msg empty string
         mMap.addMarker(new MarkerOptions().position(sydney).title("Bus"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
